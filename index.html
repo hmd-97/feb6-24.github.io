@@ -1,50 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Website</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Google Model Viewer Example</title>
 </head>
-
 <body>
-    <header>
-        <h1>Welcome to My Simple Website</h1>
-    </header>
+    <model-viewer 
+        src="path/to/your/model.gltf" 
+        alt="A 3D model" 
+        camera-controls 
+        auto-rotate 
+        background-color="#f0f0f0" 
+        style="width: 800px; height: 600px;">
+    </model-viewer>
 
-    <nav>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-    </nav>
-
-    <main>
-        <section>
-            <h2>About Us</h2>
-            <p>This is a simple website created for demonstration purposes.</p>
-        </section>
-
-        <section>
-            <h2>Contact Us</h2>
-            <p>You can reach us at example@example.com</p>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2024 Simple Website. All rights reserved.</p>
-    </footer>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js"></script>
 </body>
-<!-- Import the component -->
-<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
-
-<!-- Use it like any other HTML element -->
-<model-viewer
-    alt="Neil Armstrong's Spacesuit from the Smithsonian Digitization Programs Office and National Air and Space Museum"
-    src="shared-assets/models/NeilArmstrong.glb" ar environment-image="shared-assets/environments/moon_1k.hdr"
-    poster="shared-assets/models/NeilArmstrong.webp" shadow-intensity="1" camera-controls
-    touch-action="pan-y"></model-viewer>
-
 </html>
